@@ -1,0 +1,123 @@
+/* copyright 2022 Naviddev.com */
+
+/*=============== VARIABLES CSS ===============*/
+
+.light-theme {
+  /*=============== light theme colors  ===============*/
+
+  --background-primary: hsl(0, 0%, 100%);
+  --background-secondary: hsl(210, 100%, 98%);
+
+  --action-primary: hsl(213, 49%, 89%);
+  --action-secondary: hsl(210, 56%, 94%);
+
+  --foreground-primary: hsl(218, 24%, 18%);
+  --foreground-secondary: hsl(216, 12%, 47%);
+  --foreground-tertiary: hsl(214, 22%, 70%);
+
+  --accent: hsl(229, 94%, 62%);
+}
+
+.dark-theme {
+  /*=============== dark theme colors  ===============*/
+  --background-primary: hsl(218, 23%, 23%);
+  --background-secondary: hsl(220, 26%, 14%);
+
+  --action-primary: hsl(216, 15%, 52%);
+  --action-secondary: hsl(218, 23%, 23%);
+
+  --foreground-primary: hsl(210, 38%, 95%);
+  --foreground-secondary: hsl(211, 25%, 84%);
+  --foreground-tertiary: hsl(214, 20%, 69%);
+
+  --accent: hsl(229, 94%, 62%);
+}
+
+:root {
+  /*========== Colors ==========*/
+  --white: hsl(0, 0%, 100%);
+
+  /*========== Font and typography ==========*/
+  --fs-base: 0.85rem;
+  --fs-1: 1.875rem;
+  --fs-2: 1.5rem;
+  --fs-3: 1.25rem;
+  --fs-4: 0.875rem;
+  --fs-5: 0.75rem;
+
+  /*========== spacing ==========*/
+  --py: 5rem;
+}
+
+/*=============== Reset ===============*/
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+img,
+button {
+  display: block;
+}
+
+a,
+span {
+  display: inline-block;
+}
+
+button {
+  font: inherit;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+html {
+  font-family: "Inter", sans-serif;
+  font-size: var(--fs-base); /* base font-size (0.85rem = 13.6px) */
+  line-height: 1.8;
+}
+
+:focus {
+  outline-offset: 4px;
+}
+
+/*=============== scrollbar style ===============*/
+
+::-webkit-scrollbar {
+  width: 16px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 20px;
+  border: 4px solid;
+}
+
+.light-theme::-webkit-scrollbar-thumb {
+  border-color: hsl(0, 0%, 90%);
+}
+
+.dark-theme::-webkit-scrollbar-thumb {
+  border-color: hsl(219, 27%, 20%);
+}
+
+.light-theme::-webkit-scrollbar-track {
+  background: hsl(0, 0%, 90%);
+}
+
+.dark-theme::-webkit-scrollbar-track {
+  background: hsl(219, 27%, 20%);
+}
