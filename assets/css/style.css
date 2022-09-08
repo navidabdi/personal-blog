@@ -121,3 +121,140 @@ html {
 .dark-theme::-webkit-scrollbar-track {
   background: hsl(219, 27%, 20%);
 }
+/*=============== BASE ===============*/
+.h1,
+.h2,
+.h3,
+.h4 {
+  display: block;
+  color: var(--foreground-primary);
+}
+.h1 {
+  font-size: var(--fs-1);
+  font-weight: 900;
+}
+.h2 {
+  font-size: var(--fs-2);
+  font-weight: 700;
+}
+.h3 {
+  font-size: var(--fs-3);
+  font-weight: 700;
+}
+.h4 {
+  font-size: var(--fs-4);
+  font-weight: 700;
+}
+.text-sm {
+  font-size: var(--fs-4);
+}
+.text-tiny {
+  font-size: var(--fs-5);
+}
+/*=============== REUSABLE CSS CLASSES ===============*/
+.container {
+  padding: 0 15px;
+  margin-inline: auto;
+  margin: auto; /* fallback for margin-inline */
+}
+
+.btn {
+  min-width: 10rem;
+  border-radius: 100px;
+}
+/*=============== HEADER ===============*/
+header {
+  background: var(--background-primary);
+}
+
+header .flex-wrapper {
+  display: none;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  padding: 15px 0;
+}
+
+.logo {
+  font-weight: 900;
+  font-size: 1.5rem;
+  color: var(--foreground-primary);
+}
+.logo span {
+  color: var(--accent);
+}
+
+header .btn-group {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.theme-btn-mobile,
+.nav-menu-btn,
+.nav-close-btn {
+  background: var(--action-secondary);
+  color: var(--foreground-tertiary);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 25px;
+  transition: all 0.2s ease-in;
+}
+:is(.theme-btn-mobile, .nav-menu-btn, .nav-close-btn):hover {
+  background: var(--accent);
+  color: var(--white);
+}
+.theme-btn-mobile ion-icon {
+  display: none;
+}
+.theme-btn-mobile.light .sun,
+.theme-btn-mobile.dark .moon {
+  display: block;
+}
+.mobile-nav {
+  position: fixed;
+  inset: 0;
+  background: var(--background-primary);
+  padding: 70px 20px;
+  overflow: auto;
+  overscroll-behavior: contain;
+  transform: translateX(100%);
+  visibility: hidden;
+  transition: 0.5s cubic-bezier(1, 0, 0.3, 0.7);
+  z-index: 10;
+}
+.mobile-nav.active {
+  transform: translate(0);
+  visibility: visible;
+}
+.nav-close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+.mobile-nav .wrapper {
+  padding-bottom: 1.25rem;
+  margin-bottom: 1.25rem;
+  border-bottom: 1px solid var(--action-primary);
+}
+.mobile-nav .nav-title {
+  margin-bottom: 1rem;
+}
+.mobile-nav .nav-item {
+  margin-bottom: 0.5rem;
+}
+.mobile-nav .nav-link {
+  font-size: var(--fs-3);
+  color: var(--foreground-secondary);
+  transition: all 0.2s;
+}
+.mobile-nav .nav-link:hover {
+  color: var(--accent);
+}
