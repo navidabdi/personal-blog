@@ -426,3 +426,65 @@ header .btn-group {
 .blog ion-icon {
   --ionicon-stroke-width: 50px;
 }
+.load-more {
+  margin: auto;
+  background: var(--foreground-secondary);
+  color: var(--background-secondary);
+  padding: 0.6rem 1.2rem;
+  transition: all 0.2s;
+}
+.load-more {
+  background: var(--accent);
+}
+/*=============== ASIDE ===============*/
+.aside {
+  display: none;
+}
+
+/*=============== FOOTER ===============*/
+footer {
+  background: var(--background-primary);
+}
+
+footer .container {
+  padding: var(--py) 15px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+footer .wrapper {
+  text-align: center;
+}
+.footer-text {
+  color: var(--foreground-secondary);
+  max-width: 300px;
+  margin: auto;
+}
+.footer-title {
+  color: var(--foreground-primary);
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+.footer-link {
+  color: var(--foreground-secondary);
+}
+
+.footer-link:hover {
+  color: var(--accent);
+}
+.copyright {
+  color: var(--foreground-secondary);
+  font-size: var(--fs-4);
+  text-align: center;
+  padding: 1rem;
+  border-top: 1px solid var(--action-primary);
+}
+
+.copyright a {
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.copyright a:hover {
+  text-decoration: underline;
+}
