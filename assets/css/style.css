@@ -161,7 +161,53 @@ html {
 .btn {
   min-width: 10rem;
   border-radius: 100px;
+  text-align: center;
+  transition: all 0.2s;
 }
+.btn-primary {
+  background: var(--accent);
+  color: var(--white);
+  padding: 0.6rem 1.2rem;
+}
+.btn-primary:hover {
+  background: var(--foreground-secondary);
+  color: var(--action-primary);
+}
+.btn-secondary {
+  background: var(--action-secondary);
+  color: var(--foreground-secondary);
+  padding: 0.6rem 1.2rem;
+  border: 3px solid var(--foreground-tertiary);
+}
+.btn-secondary:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+/*=============== Extra style for dark theme ===============*/
+
+.dark-theme .btn-primary:hover {
+  color: var(--background-primary);
+}
+
+.dark-theme .blog-topic {
+  background: var(--action-primary);
+  color: var(--foreground-secondary);
+}
+
+.dark-theme .blog-topic:hover {
+  background: var(--foreground-primary);
+  color: var(--action-primary);
+}
+
+.dark-theme .load-more:hover {
+  color: var(--white);
+}
+
+.dark-theme .aside .h2 {
+  color: var(--foreground-primary);
+}
+
 /*=============== HEADER ===============*/
 header {
   background: var(--background-primary);
@@ -257,4 +303,35 @@ header .btn-group {
 }
 .mobile-nav .nav-link:hover {
   color: var(--accent);
+}
+
+/*=============== HERO SECTION ===============*/
+
+.hero {
+  background: var(--background-primary);
+  padding-top: 2rem;
+  padding-bottom: var(--py);
+  text-align: center;
+}
+.hero .h1 {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+.hero b {
+  color: var(--accent);
+  font-weight: inherit;
+}
+.hero .h3 {
+  color: var(--foreground-secondary);
+  margin-bottom: 2rem;
+}
+
+.hero .btn-group {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.hero .right {
+  display: none;
 }
